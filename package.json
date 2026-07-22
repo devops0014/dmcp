@@ -1,0 +1,19 @@
+{
+  "name": "production-docker-mcp",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "check": "node --check script.js && node --check lib/docker.js && node --check lib/utils.js && node --check lib/security.js && node --check lib/diagnostics.js && node --check lib/stats.js && node --check lib/swarm.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "dockerode": "^4.0.7",
+    "dotenv": "^16.6.1"
+  }
+}
